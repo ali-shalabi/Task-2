@@ -1,0 +1,227 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.todo-input-container {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.todo-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-input input {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.todo-input button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.todo-input button:hover {
+    background-color: #008c9e;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.filter-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00bcd4;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: #008c9e;
+}
+
+.tasks-container {
+    width: 80%;
+    height: 200px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    overflow-y: auto;
+    background-color: transparent;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.task-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.task-buttons .delete {
+    color: red;
+}
+
+.task-buttons .edit {
+    color: orange;
+}
+
+.task-buttons .checkbox {
+    color: green;
+}
+
+.delete-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.delete-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5252;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-buttons button:hover {
+    background-color: #d70000;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 25px;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.cancel {
+    background-color: #ff5252;
+    color: white;
+}
+
+.completed-task {
+    color: red;
+    text-decoration: line-through;
+}
+
+/* New Styles for Validation Message */
+.validation-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+    text-align: left;
+    width: 98%;
+    margin-left: 1%;
+}
