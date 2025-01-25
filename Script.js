@@ -22,7 +22,7 @@ function saveTasksToLocalStorage() {
 function loadTasksFromLocalStorage() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks.forEach(task => {
-        const taskElement = document.createElement('div');
+        const taskElement     = document.createElement('div');
         taskElement.className = 'task';
 
         const taskName = document.createElement('span');
