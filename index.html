@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="Task-2.css">
+</head>
+<body>
+    <h1>TodoInput</h1>
+    <div class="todo-input-container">
+        <div class="todo-input">
+            <input type="text" id="taskInput" placeholder="New Todo">
+            <span id="validationMessage" class="validation-message">Task must meet the requirements.</span>
+            <button onclick="addTask()">Add new task</button>
+        </div>
+    </div>
+
+    <h1>Todo List</h1>
+    <div class="filter-buttons">
+        <button onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('done')">Done</button>
+        <button onclick="filterTasks('todo')">Todo</button>
+    </div>
+
+    <div class="tasks-container" id="tasksContainer">
+        <!-- Tasks will be dynamically added here -->
+    </div>
+
+    <div class="delete-buttons">
+        <button onclick="deleteDoneTasks()">Delete Done Tasks</button>
+        <button onclick="deleteAllTasks()">Delete All Tasks</button>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-content">
+            <h2>Delete Task</h2>
+            <p>Are you sure you want to delete this task?</p>
+            <div class="modal-buttons">
+                <button class="confirm" onclick="confirmDelete()">Confirm</button>
+                <button class="cancel" onclick="closeModal('deleteModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h2>Edit Task</h2>
+            <input type="text" id="editTaskInput" placeholder="Edit Task Name">
+            <div class="modal-buttons">
+                <button class="confirm" onclick="confirmEdit()">Save</button>
+                <button class="cancel" onclick="closeModal('editModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="alertModal">
+        <div class="modal-content">
+            <h2>Alert</h2>
+            <p>Please enter a task name!</p>
+            <div class="modal-buttons">
+                <button class="confirm" onclick="closeModal('alertModal')">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="deleteDoneModal">
+        <div class="modal-content">
+            <h2>Delete Tasks</h2>
+            <p>Are you sure you want to delete all completed tasks?</p>
+            <div class="modal-buttons">
+                <button class="confirm" onclick="confirmDeleteDone()">Confirm</button>
+                <button class="cancel" onclick="closeModal('deleteDoneModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="deleteAllModal">
+        <div class="modal-content">
+            <h2>Delete Tasks</h2>
+            <p>Are you sure you want to delete all tasks?</p>
+            <div class="modal-buttons">
+                <button class="confirm" onclick="confirmDeleteAll()">Confirm</button>
+                <button class="cancel" onclick="closeModal('deleteAllModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Script.js"> </script>
+    
+</body>
+</html>
